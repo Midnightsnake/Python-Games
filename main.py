@@ -18,7 +18,7 @@ UnmovingSpeed = False
 cash = 10000
 AvailableJumps = 1
 ShowUI = True
-xValue1 = 250
+xValue1 = 400
 JumpJumpJumpJump = AvailableJumps
 SpeedSpeedSpeedSpeed = (0, 255, 0)
 SpeedSpeedSpeed = "Slow"
@@ -113,7 +113,7 @@ while True:
     if BackgroundColor == 12:
       BackgroundText = (255, 255, 255)
     else:
-      BackgroundText = (0, 0, 0)
+      BackgroundText = (0, 0, 0)  
     if CharacterColor == 12:
       CharacterText = (255, 255, 255)
     else:
@@ -341,12 +341,18 @@ while True:
     elif level == 5:
           if xValue1 >= 750:
              SpeedPlatform = -0.5
-          elif xValue1 <= 250:
+          elif xValue1 <= 400:
              SpeedPlatform = 0.5
-          if positionX >= xValue1 - 75 and positionX <= xValue1 + 75 and positionY >= 750 and positionY <= 770:
-             speedX = SpeedPlatform
+          if positionX >= xValue1 and positionX <= xValue1 + 150 and positionY >= 745 and positionY <= 755:
+             character.position[0] += SpeedPlatform
+             print("hi")
           xValue1 += SpeedPlatform
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (xValue1, 750, 150, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (250, 750, 150, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1000, 600, 150, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1150, 450, 150, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1300, 300, 150, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1450, 150, 150, 20), character, AvailableJumps)
     if oldpositionY == character.position[1] and oldAvailableJumps == AvailableJumps:
       jump = False
     DeathThing = pygame.draw.rect(display, DeathTypes[DeathColor][1], (0, DeathSpeed, 2000, 1000))
