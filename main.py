@@ -9,7 +9,7 @@ positionY = 370
 character = Character((positionX, positionY))
 speedX = 0
 character.speedY = 1
-gravity = 0.1
+gravity = 0.075
 Speed1 = 0.75
 SuperFastSpeed = False
 SuperHighJump = False
@@ -355,14 +355,14 @@ while True:
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1450, 150, 150, 20), character, AvailableJumps)
     elif level == 6:
           if yValue1 >= 770:
-            SpeedPlatform2 = -0.5
+             SpeedPlatform2 = -0.5
           elif yValue1 <= 370:
-            SpeedPlatform2 = 0.5
+             SpeedPlatform2 = 0.5
           if character.position[0] >= 300 and character.position[0] <= 550 and character.position[1] >= yValue1 - 5 and character.position[1] <= yValue1 + 5:
              character.position[1] += SpeedPlatform2
+          yValue1 += SpeedPlatform2
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (400, yValue1, 150, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (250, 750, 150, 20), character, AvailableJumps)
-          yValue1 += SpeedPlatform2
     if oldpositionY == character.position[1] and oldAvailableJumps == AvailableJumps:
       jump = False
     DeathThing = pygame.draw.rect(display, DeathTypes[DeathColor][1], (0, DeathSpeed, 2000, 1000))
