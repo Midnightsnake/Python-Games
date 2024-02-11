@@ -358,7 +358,7 @@ while True:
             SpeedPlatform2 = -0.5
           elif yValue1 <= 400:
             SpeedPlatform2 = 0.5
-          if character.position[0] >= 400 and character.position[0] <= 550 and character.position[1] >= yValue1 - 5 and character.position[1] <= yValue1 + 5:
+          if character.position[0] >= 300 and character.position[0] <= 550 and character.position[1] >= yValue1 - 5 and character.position[1] <= yValue1 + 5:
              character.position[1] += SpeedPlatform2
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (400, yValue1, 150, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (250, 750, 150, 20), character, AvailableJumps)
