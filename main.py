@@ -5,11 +5,11 @@ pygame.init()
 timer = pygame.time.get_ticks()
 level = 1
 positionX = 275
-positionY = 750
+positionY = 370
 character = Character((positionX, positionY))
 speedX = 0
 character.speedY = 1
-gravity = 0.05
+gravity = 0.1
 Speed1 = 0.75
 SuperFastSpeed = False
 SuperHighJump = False
@@ -354,9 +354,9 @@ while True:
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1300, 300, 150, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1450, 150, 150, 20), character, AvailableJumps)
     elif level == 6:
-          if yValue1 >= 750:
+          if yValue1 >= 770:
             SpeedPlatform2 = -0.5
-          elif yValue1 <= 400:
+          elif yValue1 <= 370:
             SpeedPlatform2 = 0.5
           if character.position[0] >= 300 and character.position[0] <= 550 and character.position[1] >= yValue1 - 5 and character.position[1] <= yValue1 + 5:
              character.position[1] += SpeedPlatform2
