@@ -362,6 +362,11 @@ while True:
              character.position[1] += SpeedPlatform2
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (400, yValue1, 150, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (250, 750, 150, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (550, 400, 150, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (750, 350, 150, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (950, 300, 150, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1150, 250, 150, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1350, 200, 150, 20), character, AvailableJumps)
           yValue1 += SpeedPlatform2
     if oldpositionY == character.position[1] and oldAvailableJumps == AvailableJumps:
       jump = False
