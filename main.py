@@ -9,7 +9,7 @@ positionY = 750
 character = Character((positionX, positionY))
 speedX = 0
 character.speedY = 1
-gravity = 0.1
+gravity = 0.5
 Speed1 = 0.75
 SuperFastSpeed = False
 SuperHighJump = False
@@ -344,7 +344,7 @@ while True:
              SpeedPlatform = -0.5
           elif xValue1 <= 400:
              SpeedPlatform = 0.5
-          if character.position[0] >= xValue1 and character.position[0] <= xValue1 + 150 and character.position[1] >= 745 and character.position[1] <= 755:
+          if character.position[0] >= xValue1 - 100 and character.position[0] <= xValue1 + 150 and character.position[1] >= 745 and character.position[1] <= 755:
              character.position[0] += SpeedPlatform
           xValue1 += SpeedPlatform
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (xValue1, 750, 150, 20), character, AvailableJumps)
