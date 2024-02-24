@@ -26,7 +26,7 @@ SpeedSpeedSpeed = "Slow"
 SpeedSpeed = 0.05
 SpeedColor = (0, 255, 0)
 JumpColor = (0, 255, 0)
-JumpPower = 7.5
+JumpPower = 7.5 
 DeathSpeed = 800
 PlatformColor = 12
 PlatformText = (0, 0, 0)
@@ -368,6 +368,24 @@ while True:
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1150, 250, 150, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1350, 200, 150, 20), character, AvailableJumps)
           yValue1 += SpeedPlatform2
+    elif level == 7:
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (250, 750, 50, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (420, 600, 50, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (590, 700, 50, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (760, 550, 50, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (930, 650, 50, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1100, 500, 50, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1270, 600, 50, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1440, 450, 50, 20), character, AvailableJumps)
+    elif level == 8:
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (250, 750, 25, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (420, 600, 25, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (590, 700, 25, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (760, 550, 25, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (930, 650, 25, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1100, 500, 25, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1270, 600, 25, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1440, 450, 25, 20), character, AvailableJumps)
     if oldpositionY == character.position[1] and oldAvailableJumps == AvailableJumps:
       jump = False
     DeathThing = pygame.draw.rect(display, DeathTypes[DeathColor][1], (0, DeathSpeed, 2000, 1000))
