@@ -3,7 +3,7 @@ from pygame.locals import QUIT
 from character import Character
 pygame.init()
 timer = pygame.time.get_ticks()
-level = 10
+level = 1
 positionX = 275
 positionY = 750
 character = Character((positionX, positionY))
@@ -15,7 +15,7 @@ SuperFastSpeed = False
 SuperHighJump = False
 SuperSlowSpeed = False
 UnmovingSpeed = False
-cash = 450
+cash = 0
 AvailableJumps = 1
 ShowUI = True
 xValue1 = 400
@@ -441,7 +441,7 @@ while True:
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1300, 730, 20, 20), character, AvailableJumps)
           if yValue3 >= 750:
             SpeedPlatform5 = -0.5
-          elif yValue3 <= 400:
+          elif yValue3 <= 40:
             SpeedPlatform5 = 0.5
           if character.position[0] >= 1400 and character.position[0] <= 1650 and character.position[1] >= yValue3 - 5 and character.position[1] <= yValue3 + 5:
              character.position[1] += SpeedPlatform5
@@ -453,6 +453,8 @@ while True:
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1550, 0, 10, 250), character, AvailableJumps)
           if character.position[0] >= 1450 and character.position[0] <= 1550 and character.position[1] >= 0 and character.position[1] <= 250:
              speedX = 0
+    elif level == 11:
+       level = 1
     if oldpositionY == character.position[1] and oldAvailableJumps == AvailableJumps:
       jump = False
     DeathThing = pygame.draw.rect(display, DeathTypes[DeathColor][1], (0, DeathSpeed, 2000, 1000))
