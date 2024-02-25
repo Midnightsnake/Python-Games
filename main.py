@@ -306,7 +306,7 @@ while True:
     oldAvailableJumps = AvailableJumps
     if level == 1:
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (250, 750, 150, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (420, d, 150, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (420, 700, 150, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (590, 650, 150, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (760, 600, 150, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (930, 550, 150, 20), character, AvailableJumps)
