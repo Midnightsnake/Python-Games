@@ -435,7 +435,7 @@ while True:
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (700, 50, 20, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (900, 50, 20, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1100, 50, 20, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1200, 50, 10, 550), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1200, 200, 10, 600), character, AvailableJumps)
           if character.position[0] >= 1100 and character.position[0] <= 1200 and character.position[1] >= 200 and character.position[1] <= 750:
              speedX = 0
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1300, 730, 20, 20), character, AvailableJumps)
@@ -447,7 +447,7 @@ while True:
              character.position[1] += SpeedPlatform5
           yValue3 += SpeedPlatform5
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1500, yValue2, 20, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1550, 400, 10, 350), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1550, 400, 10, 400), character, AvailableJumps)
           if character.position[0] >= 1450 and character.position[0] <= 1550 and character.position[1] >= 400 and character.position[1] <= 750:
              speedX = 0
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1550, 0, 10, 250), character, AvailableJumps)
