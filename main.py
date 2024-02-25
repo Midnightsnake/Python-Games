@@ -420,10 +420,10 @@ while True:
              character.position[1] += SpeedPlatform4
           yValue2 += SpeedPlatform4
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (900, yValue2, 150, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (700, 425, 20, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (500, 425, 20, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (300, 425, 20, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (300, 100, 20, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (700, 400, 20, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (500, 400, 20, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (300, 400, 20, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (300, 50, 20, 20), character, AvailableJumps)
           if xValue3 >= 680:
              SpeedPlatform5 = -0.5
           elif xValue3 <= 320:
@@ -431,11 +431,11 @@ while True:
           if character.position[0] >= xValue3 - 100 and character.position[0] <= xValue3 + 150 and character.position[1] >= 115 and character.position[1] <= 135:
              character.position[0] += SpeedPlatform5
           xValue3 += SpeedPlatform5
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (xValue3, 100, 20, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (700, 100, 20, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (900, 100, 20, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1100, 100, 20, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1200, 200, 10, 550), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (xValue3, 50, 20, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (700, 50, 20, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (900, 50, 20, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1100, 50, 20, 20), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1200, 50, 10, 550), character, AvailableJumps)
           if character.position[0] >= 1100 and character.position[0] <= 1200 and character.position[1] >= 200 and character.position[1] <= 750:
              speedX = 0
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1300, 730, 20, 20), character, AvailableJumps)
@@ -520,7 +520,7 @@ while True:
       display.blit(ResetSettings, (510, 425))
     player = pygame.draw.polygon(display, 
 BackgroundColors[CharacterColor][1], ((character.position[0] + 50, character.position[1] - 75), (character.position[0], character.position[1]), (character.position[0] + 100, character.position[1])))
-    drawplatform((255, 215, 0), (1650, 100, 150, 900), character, AvailableJumps)
+    drawplatform((255, 215, 0), (1650, 0, 2000, 2000), character, AvailableJumps)
     if character.position[0] > 1550:
       cash += level * 10
       level += 1
