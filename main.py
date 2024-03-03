@@ -14,6 +14,7 @@ speedX = 0
 character.speedY = 1
 gravity = 0.075
 Speed1 = 0.75
+DeathCounter = 0
 SuperFastSpeed = False
 SuperHighJump = False
 SuperSlowSpeed = False
@@ -116,6 +117,7 @@ while True:
     Death = font.render("Death Type: " + DeathTypes[DeathColor][0], True, DeathText)
     Death2 = font.render(DeathTypes[DeathColor][0] + " Speed: " + str(SpeedSpeedSpeed), True, (0, 0, 0))
     HowToToggleUI = font.render("Type \"C\" to close UI & type \"O\" to open UI", True, (0, 0, 0))
+    DeathCounterSettings = font.render("Deaths: " + str(DeathCounter), True, (0, 0, 0))
     ResetSettings = font.render("Reset Settings", True, (0, 0, 0))
     display.fill(BackgroundColors[BackgroundColor][1])
     if BackgroundColor == 12:
@@ -464,10 +466,10 @@ while True:
     DeathThing = pygame.draw.rect(display, DeathTypes[DeathColor][1], (0, DeathSpeed, 2000, 1000))
     DeathSpeed -= SpeedSpeed
     if ShowUI:
-      Settings = pygame.draw.rect(display, (175, 175, 200), (190, 100, 300, 380))
-      Settings2 = pygame.draw.rect(display, (175, 175, 200), (500, 330, 375, 135))
-      Shop = pygame.draw.rect(display, (175, 175, 200), (500, 100, 375, 220))
-      Theme = pygame.draw.rect(display, (175, 175, 200), (885, 100, 340, 260))
+      Settings = pygame.draw.rect(display, (200, 200, 175), (190, 100, 300, 380))
+      Settings2 = pygame.draw.rect(display, (200, 200, 175), (500, 330, 375, 135))
+      Shop = pygame.draw.rect(display, (200, 200, 175), (500, 100, 375, 220))
+      Theme = pygame.draw.rect(display, (200, 200, 175), (885, 100, 340, 260))
       itemposition = 115
       for k, v in Items.items():
         if k != "Unmoving" and k != "Super Slow": 
@@ -512,6 +514,7 @@ while True:
       DeathSettings = pygame.draw.rect(display, DeathTypes[DeathColor][1], (195, 395, 250, 35))
       Death2Settings = pygame.draw.rect(display, SpeedSpeedSpeedSpeed, (195, 435, 285, 35))
       HowToTogggleUISettings = pygame.draw.rect(display, (0, 255, 0), (505, 340, 360, 35))
+      DeathCounterSettingsSettings = pygame.draw.rect(display, (255, 255, 0), (505, 380, 200, 35))
       ResetSettingsSettings = pygame.draw.rect(display, (255, 0, 0), (505, 420, 125, 35))
       display.blit(LevelDisplay, (200, 120))
       display.blit(Cash, (200, 160))
@@ -523,6 +526,7 @@ while True:
       display.blit(Death, (200, 400))
       display.blit(Death2, (200, 440))
       display.blit(HowToToggleUI, (510, 345))
+      display.blit(DeathCounterSettings, (510, 385))
       display.blit(ResetSettings, (510, 425))
       if starvisible == True:
         display.blit(star, (265, 120))
@@ -536,6 +540,7 @@ BackgroundColors[CharacterColor][1], ((character.position[0] + 50, character.pos
       character.speedY = 0
       character.setposition(275, 750)
     if character.position[1] > DeathSpeed:
+      DeathCounter += 1
       character.setposition(275, 750)
       DeathSpeed = 800
       character.speedY = 0
