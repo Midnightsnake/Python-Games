@@ -6,7 +6,7 @@ star = pygame.image.load("Star.png")
 star = pygame.transform.scale(star, (25, 25))
 starvisible = False
 timer = pygame.time.get_ticks()
-level = 10
+level = 1
 positionX = 275
 positionY = 750
 character = Character((positionX, positionY))
@@ -525,7 +525,7 @@ while True:
       display.blit(HowToToggleUI, (510, 345))
       display.blit(ResetSettings, (510, 425))
       if starvisible == True:
-        display.blit(star, (250, 115))
+        display.blit(star, (265, 120))
     player = pygame.draw.polygon(display, 
 BackgroundColors[CharacterColor][1], ((character.position[0] + 50, character.position[1] - 75), (character.position[0], character.position[1]), (character.position[0] + 100, character.position[1])))
     drawplatform((255, 215, 0), (1650, 0, 2000, 2000), character, AvailableJumps)
