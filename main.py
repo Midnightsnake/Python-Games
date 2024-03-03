@@ -2,8 +2,11 @@ import pygame, sys
 from pygame.locals import QUIT
 from character import Character
 pygame.init()
+star = pygame.image.load("Star.png")
+star = pygame.transform.scale(star, (25, 25))
+starvisible = False
 timer = pygame.time.get_ticks()
-level = 1
+level = 10
 positionX = 275
 positionY = 750
 character = Character((positionX, positionY))
@@ -15,7 +18,7 @@ SuperFastSpeed = False
 SuperHighJump = False
 SuperSlowSpeed = False
 UnmovingSpeed = False
-cash = 0
+cash = 1000
 AvailableJumps = 1
 ShowUI = True
 xValue1 = 400
@@ -435,7 +438,7 @@ while True:
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (700, 50, 20, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (900, 50, 20, 20), character, AvailableJumps)
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1100, 50, 20, 20), character, AvailableJumps)
-          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1200, 200, 10, 600), character, AvailableJumps)
+          AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1200, 75, 10, 600), character, AvailableJumps)
           if character.position[0] >= 1100 and character.position[0] <= 1200 and character.position[1] >= 200 and character.position[1] <= 750:
              speedX = 0
           AvailableJumps = drawplatform(BackgroundColors[PlatformColor][1], (1300, 730, 20, 20), character, AvailableJumps)
@@ -454,6 +457,7 @@ while True:
           if character.position[0] >= 1450 and character.position[0] <= 1550 and character.position[1] >= 0 and character.position[1] <= 250:
              speedX = 0
     elif level == 11:
+       starvisible = True
        level = 1
     if oldpositionY == character.position[1] and oldAvailableJumps == AvailableJumps:
       jump = False
@@ -520,6 +524,8 @@ while True:
       display.blit(Death2, (200, 440))
       display.blit(HowToToggleUI, (510, 345))
       display.blit(ResetSettings, (510, 425))
+      if starvisible == True:
+        display.blit(star, (250, 115))
     player = pygame.draw.polygon(display, 
 BackgroundColors[CharacterColor][1], ((character.position[0] + 50, character.position[1] - 75), (character.position[0], character.position[1]), (character.position[0] + 100, character.position[1])))
     drawplatform((255, 215, 0), (1650, 0, 2000, 2000), character, AvailableJumps)
